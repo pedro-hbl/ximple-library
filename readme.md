@@ -16,11 +16,10 @@ To set up and run this project locally, you will need to have installed:
 
 ### Installation
 
-1. Clone the repository: git clone https://link-to-repository.git
+1. Clone the repository: git clone https://github.com/pedro-hbl/ximple-library.git
 2. Navigate to the project directory: cd ximple-library
 3. Compile the project using Maven: mvn clean install
 4. Run the application: mvn spring-boot:run
-
 
 Now, the application should be running locally and ready to be accessed.
 
