@@ -45,15 +45,30 @@ Caching was implemented within the application to enhance performance, particula
 
 Observability was incorporated into the application to ensure monitoring of its health, performance tracking, and logging of important events. By leveraging observability tools such as Micrometer and Prometheus, we can collect and analyze metrics related to the application's performance and resource utilization. This allows for better insights into the application's behavior and facilitates proactive monitoring and troubleshooting.
 
-### Rate Limiting (RPS)
-
-Rate limiting mechanisms were implemented to prevent abuse of the system and ensure fair usage of resources. By limiting the number of requests per second (RPS), we can mitigate the risk of overload and maintain system stability and availability. Rate limiting helps protect against denial-of-service (DoS) attacks and ensures a consistent and reliable experience for all users.
 
 ## Database Structure
 
-The database schema is designed to support the requirements of the application. It includes tables for users, books, reservations, and reviews. Below is a simplified representation:
+### Database Modeling
+The database schema for the online library system is designed to efficiently support book searches, reservations, and reviews. The schema includes tables for users, books, reservations, and reviews, allowing for the management of these entities in a relational database.
 
-![Entity-Relationship Diagram](link-to-ER-diagram.png)
+### User Table
+The users table stores information about registered users of the library system. Each user is identified by a unique user ID (userId) and includes fields for the user's name, email, password, and creation timestamp. This table enables user authentication and management within the application.
+
+### Book Table
+The books table represents the collection of books available in the library. Each book entry contains details such as the author's name, book title, publisher, publication year, total copies available, and reserved copies. The bookId serves as the primary key for identifying each book in the system. This table facilitates book search functionality and inventory management.
+
+### Reservation Table
+Reservations made by users to borrow books are stored in the reservations table. Each reservation is associated with a specific user (userId) and book (bookId) and includes a reservation ID (reservationId) and the timestamp of the reservation request (reservationRequestDatetime). This table tracks booked items and assists in managing borrowing periods and availability.
+
+### Review Table
+The reviews table records user reviews and ratings for books in the library. Each review entry is linked to a user (userId) and book (bookId) and includes fields for the review ID (reviewId), user comment, rating, and creation timestamp (creationDatetime). This table supports the review functionality, enabling users to provide feedback and ratings for books they have read.
+
+### Database Structure Justification
+The relational database schema was chosen for its suitability in modeling the relationships between users, books, reservations, and reviews. This structure allows for efficient data retrieval, updates, and integrity enforcement. By utilizing a relational database, we can ensure data consistency and facilitate complex queries required for various application features.
+
+The chosen schema provides a clear representation of the entities and their relationships, making it easy to understand and maintain. Additionally, relational databases offer robust transaction support, ensuring ACID (Atomicity, Consistency, Isolation, Durability) properties, which are crucial for maintaining data integrity in a multi-user environment.
+
+Overall, the relational database schema aligns with the requirements of the online library system, providing a solid foundation for data management and application functionality.
 
 This schema was carefully crafted to ensure data integrity and efficient query performance.
 
