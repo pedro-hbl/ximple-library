@@ -35,7 +35,7 @@ Spring Boot was utilized to accelerate the development process by simplifying th
 
 ### H2 Database
 
-For development environments, we opted for the H2 Database due to its ease of use and configuration. H2 provides an in-memory database option, which is lightweight and suitable for local development and testing.
+For development environments, I opted for the H2 Database due to its ease of use and configuration. H2 provides an in-memory database option, which is lightweight and suitable for local development and testing.
 
 ### Caching
 
