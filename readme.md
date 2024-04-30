@@ -117,7 +117,6 @@ The caching configuration is managed in the `CacheConfig` class, which defines t
 ### Additional Notes
 
 - **Observability**: Prometheus is configured to collect metrics, providing insights into application performance.
-- **Rate Limiting**: Rate limiting is enforced to prevent abuse and ensure fair usage of resources.
 - **Database Migration**: Flyway is utilized for database schema versioning and migration.
 
 
